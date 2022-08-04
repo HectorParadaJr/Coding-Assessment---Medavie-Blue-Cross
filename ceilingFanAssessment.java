@@ -1,9 +1,23 @@
+/* ceilingFanAssessment.java
+ * Ceiling Fan Applivation
+ * 
+ * 2 pull cord fan application assessment
+ *      Hector Parada, 2022.07.27 :Created
+ */
+
 import java.io.Console;
 
 import javax.lang.model.util.ElementScanner6;
 
-/**
- * ceilingFan
+/* 2 pull cord ceiling fan application
+ * [✓] Fan has a reverse cord/option
+ * [✓] Increase speed once speed cord is pulled/selected
+ * [✓] Reverse fan rotation once reverse cord is pulled
+ * [✓] Revert speed to 0 (off) once speed reaches 3 and speed cord/option is pulled/selected
+ * [✓] Display fan speed and fan rotation
+ * [✓] Validatition for menu options(Optioanl)
+ * [✓] Fan has a speed cord/option
+ * [✓] Create two separate menus(one main menu and one application menu)
  */
 public class ceilingFanAssessment {
     static Console console = System.console();
@@ -47,19 +61,6 @@ public class ceilingFanAssessment {
     /// Main ceiling application
 
     public static void CeilingApplication() {
-        /*
-         * #TODO: Finish up the Ceiling application method
-         * - [] display ceiling fan speed
-         * - [] display fan rotation
-         * - [] Create CeilingApplication Menu
-         * - [] Pull speed cord
-         * - [] increase speed
-         * - [] pull reverse cord
-         * - [] reverse fan
-         * - [] exit ceiling application
-         * - [] loop application until otherwise
-         * - []return to Main menu
-         */
 
         int fanSpeed = 0;
         boolean reverseFan = false;
@@ -71,14 +72,17 @@ public class ceilingFanAssessment {
         int userAnswer = 0;
         boolean menuLoop = false;
 
-        // Menu will loop until user selection option to exit
+        // Menu will loop until user selects option to exit
         do {
+            // display fan is off and once started what way the rotation the fan will spin
+            // display currrent fan speed and current fan rotation
             if (fanSpeed == 0) {
                 System.out
                         .println("Fan is not spinning. the rotation of fan will be " + fanRotation + " once started.");
             } else {
                 System.out.println("Fan speed is at " + fanSpeed + " and fan rotation is " + fanRotation);
             }
+            // display ceilingfan menu
             try {
                 for (int i = 0; i < ceilingFanMenu.length; i++) {
                     index = i + 1;
