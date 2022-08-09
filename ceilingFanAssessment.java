@@ -98,7 +98,7 @@ public class ceilingFanAssessment {
                 switch (userAnswer) {
                     case 1:
                         fanSpeed++;
-                        if (fanSpeed >= 3) {
+                        if (fanSpeed >= 4) {
                             fanSpeed = 0;
                         }
                         break;
